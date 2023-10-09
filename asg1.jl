@@ -14,8 +14,6 @@ end
 
 #q2.p2
 function square_of_sums(n)
-	# changed from sum_of_squares(n)^2 --> before it was computing like 
-	# (1^2 + 2^2 + 3^2)^2, but it should be doing (1 + 2 + 3)^2 (i think)
 	return reduce(+, 1:n)^2
 end
 
@@ -26,7 +24,6 @@ end
 
 #q3
 function NPV(c, r) 
-	# changed i --> i-1 line 32
 	sum = 0
 	for i in eachindex(c)
 		sum += c[i]/((1+r)^(i-1))
@@ -45,12 +42,10 @@ function NFV_end(c, r)
 end
 
 #q4.p2
-function NFV_end_2(c, r)  # CHECK
+function NFV_end_2(c, r)
 	sum = 0
-	n = length(c)
 	for i in eachindex(c)
-		sum += c[i]
-		sum *= 1+r[i]
+		sum += c[i]*(1+r[i])
 	end
 	return sum
 end
