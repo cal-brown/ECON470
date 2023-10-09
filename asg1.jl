@@ -93,10 +93,11 @@ function plot_salary()
 end
 
 # some very quick tests
-println("Leap years:", leap_year(2000), leap_year(2100), leap_year(234123), leap_year(4328))
-println("Sum of squares:", sum_of_squares(5))
-println("Square of sums:", square_of_sums(5))
-println("Diff in squares:", difference_in_squares(5))
+println("Leap years (2000, 2100, 234123, 4328): $(leap_year(2000)), $(leap_year(2100)), $(leap_year(234123)), $(leap_year(4328))")
+println("Sum of squares (n=5): $(sum_of_squares(5))")
+println("Square of sums (n=5): $(square_of_sums(5))")
+println("Diff in squares (n=5): $(difference_in_squares(5))")
 
+println("NFV_end_2 of c = (100, 100, 200, 100), r = (.10, .20, .10, .05): ", NFV_end_2([100, 100, 200, 100], [.10, .20, .10, .05])) 
 plot_expense()
 plot_salary()
